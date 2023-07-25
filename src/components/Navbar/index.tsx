@@ -1,7 +1,15 @@
 import { useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import { HiMenuAlt3 } from "react-icons/hi";
 import Logo from "../../images/logo.png";
-import ButtonSign from "../Button";
-import { Header, LogoLink, RecipePages } from "./styles";
+import Button from "../Button";
+import {
+  Header,
+  IconSign,
+  LogoLink,
+  OptionsRoute,
+  RecipePages,
+} from "./styles";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -26,24 +34,17 @@ const NavBar = () => {
           </li>
         </RecipePages>
 
-        <ButtonSign />
+        <Button />
 
-        {/* <button
-          className="block md:hidden text-white text-xl"
-          onClick={() => setOpen((prev) => !prev)}
-        >
+        <IconSign onClick={() => setOpen((prev) => !prev)}>
           {open ? <AiOutlineClose /> : <HiMenuAlt3 />}
-        </button> */}
+        </IconSign>
       </nav>
-      {/* <div
-        className={`${
-          open ? "flex" : "hidden"
-        } bg-black flex-col w-full px-4 pt-16 pb-10 text-white gap-6 text-[14px]`}
-      >
+      <OptionsRoute open={open}>
         <a href="/">Home</a>
         <a href="/#recipes">Recipes</a>
         <a href="/">Favorites</a>
-      </div> */}
+      </OptionsRoute>
     </Header>
   );
 };
