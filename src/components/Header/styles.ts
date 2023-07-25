@@ -32,13 +32,13 @@ export const BoxTitle = styled.div`
 
   h1 {
     color: #fff;
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 4rem;
     text-align: center;
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2rem;
     text-align: center;
     color: #00ff00;
