@@ -32,7 +32,7 @@ export const Main = styled.main`
     h1 {
       color: #fff;
       font-size: 4rem;
-      line-height: 2.5rem;
+      line-height: 4rem;
       text-align: center;
     }
 

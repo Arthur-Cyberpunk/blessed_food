@@ -9,7 +9,10 @@ const Header = () => {
       </div>
 
       <div className="boxTitle">
-        <h1>Taste the World with Blessed Food!</h1>(
+        <h1>
+          Taste the World with <br /> Blessed Food!
+        </h1>
+        (
         <p>
           Welcome to FlavorVerse, your passport to culinary adventures!
           <br /> Discover a treasure trove of delectable recipes from around the
