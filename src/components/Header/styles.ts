@@ -28,23 +28,38 @@ export const BoxTitle = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  //padding-top: 40px;
 
   h1 {
     color: #fff;
     font-size: 3.5rem;
     line-height: 4rem;
     text-align: center;
+
+    @media (max-width: 765px) {
+      font-size: 2.5rem;
+      line-height: 2.6rem;
+    }
   }
 
   p {
     font-size: 1rem;
-    line-height: 2rem;
+    line-height: 1.6rem;
     text-align: center;
     color: #00ff00;
     margin-top: 1rem;
-    padding: 1.4rem 1.4rem;
+    padding: 1.2rem 1.2rem;
     border-radius: 9999px;
     background-color: rgba(0, 0, 0, 0.5);
+
+    @media (max-width: 765px) {
+      font-size: 0.8rem;
+      line-height: 1.2rem;
+    }
+
+    br {
+      @media (max-width: 765px) {
+        display: none;
+      }
+    }
   }
 `;
