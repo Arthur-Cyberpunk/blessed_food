@@ -2,8 +2,8 @@ import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { HiMenuAlt3 } from "react-icons/hi";
 import Logo from "../../images/logo.png";
-import Button from "../Button";
 import {
+  ButtonSign,
   Header,
   IconSign,
   LogoLink,
@@ -34,7 +34,9 @@ const NavBar = () => {
           </li>
         </RecipePages>
 
-        <Button />
+        <ButtonSign>
+          <span>Sign in</span>
+        </ButtonSign>
 
         <IconSign onClick={() => setOpen((prev) => !prev)}>
           {open ? <AiOutlineClose /> : <HiMenuAlt3 />}

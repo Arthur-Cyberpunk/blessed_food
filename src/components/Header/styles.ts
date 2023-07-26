@@ -21,7 +21,7 @@ export const BoxTitle = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, #111 10%, transparent 90%);
+  background: linear-gradient(to top, #000 10%, transparent 90%);
   top: 0;
   z-index: 8;
   display: flex;

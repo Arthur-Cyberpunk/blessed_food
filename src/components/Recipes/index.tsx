@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
 // import Searchbar from './SearchBar'
 // import { fetchRecipes } from '../utils'
+import { fetchRecipe } from "../../utils";
 import Searchbar from "../SearchBar";
 import { Main } from "./styles";
 
@@ -30,19 +31,17 @@ const Recipes = () => {
 
   const handleSearchedRecipe = async (e: any) => {
     e.preventDefault();
-    //fetchRecipe();
+    fetchRecipe(query);
   };
 
-  // const showMore = () => {
-  //     setLimit(prev => prev + 10)
-  //     fetchRecipe()
-  // }
+  const showMore = () => {
+    setLimit((prev) => prev + 10);
+    fetchRecipe(limit);
+  };
 
-  // useEffect(() => {
-
-  //     fetchRecipe()
-
-  // }, [])
+  useEffect(() => {
+    fetchRecipe(query);
+  }, []);
 
   return (
     <Main>
@@ -56,29 +55,30 @@ const Recipes = () => {
         </form>
       </div>
 
-      {/* {
-                recipes?.length > 0 ? (
-                    <>
-                        <div className='w-full  flex flex-wrap gap-10 px-0 lg:px-10 py-10'>
-                            {
+      {recipes?.length > 0 ? (
+        <>
+          <div className="w-full  flex flex-wrap gap-10 px-0 lg:px-10 py-10">
+            {/* {
                                 recipes?.map((item, index) => (
                                     <RecipeCard recipe={item} key={index} />))
-                            }
-                        </div>
+                            } */}
+          </div>
 
-                        <div className='flex w-full items-center justify-center py-10'>
-
-                            <Button
-                                title="Show More"
-                                containerStyle="bg-green-800 text-white px-3 py-1 rounded-full text-sm"
-                                handleClick={showMore}
-                            />
-                        </div>
-                    </>
-                ) : <div className='text-white w-full items-center justify-center py-10'>
-                    <p className='text-center'>No Recipe Found</p>
-                </div>
-            } */}
+          <div className="flex w-full items-center justify-center py-10">
+            <button
+              //title="Show More"
+              //containerStyle="bg-green-800 text-white px-3 py-1 rounded-full text-sm"
+              onClick={showMore}
+            >
+              Show More
+            </button>
+          </div>
+        </>
+      ) : (
+        <div className="text-white w-full items-center justify-center py-10">
+          <p className="text-center">No Recipe Found</p>
+        </div>
+      )}
     </Main>
   );
 };
