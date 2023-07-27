@@ -24,12 +24,12 @@ export const BoxSearch = styled.div`
 
 export const Recipe = styled.div`
   width: 100%;
-  max-width: 100rem;
+  max-width: 60%;
   margin: 4rem auto;
   padding: 0 2.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-content: center;
+  gap: 2rem;
 
   @media (max-width: 1200px) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -39,7 +39,7 @@ export const Recipe = styled.div`
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: 765px) {
+  @media (max-width: 600px) {
     grid-template-columns: 1fr;
   }
 `;

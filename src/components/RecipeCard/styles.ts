@@ -20,25 +20,23 @@ export const BoxRecipe = styled.div`
 
   img {
     width: 100%;
-    max-width: 18rem;
     height: 180px;
-    border-radius: 20px;
+    border-radius: 10px;
   }
 `;
 
 export const BoxText = styled.div`
   width: 100%;
-  max-width: 18rem;
   padding: 2rem 0rem;
   display: flex;
   flex-direction: column;
   background: linear-gradient(to top, #0a0f1b 50%, transparent 100%);
-  border-radius: 20px;
+  border-radius: 10px;
   word-break: break-all;
 
   p {
     height: 2rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     padding: 0rem 1rem;
     color: #fff;
