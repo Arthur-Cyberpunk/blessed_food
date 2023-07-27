@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import { BiSearchAlt2 } from "react-icons/bi";
-// import Searchbar from './SearchBar'
-// import { fetchRecipes } from '../utils'
 import { fetchRecipes } from "../../utils";
 import RecipeCard from "../RecipeCard";
 import Searchbar from "../SearchBar";
-import { BoxSearch, Main, Recipe } from "./styles";
+import { BoxButton, BoxNoFound, BoxSearch, Main, Recipe } from "./styles";
 
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
@@ -61,20 +59,14 @@ const Recipes = () => {
             ))}
           </Recipe>
 
-          <div className="flex w-full items-center justify-center py-10">
-            <button
-              //title="Show More"
-              //containerStyle="bg-green-800 text-white px-3 py-1 rounded-full text-sm"
-              onClick={showMore}
-            >
-              Show More
-            </button>
-          </div>
+          <BoxButton>
+            <button onClick={showMore}>Show More</button>
+          </BoxButton>
         </>
       ) : (
-        <div className="text-white w-full items-center justify-center py-10">
-          <p className="text-center">No Recipe Found</p>
-        </div>
+        <BoxNoFound>
+          <p>No Recipe Found</p>
+        </BoxNoFound>
       )}
     </Main>
   );

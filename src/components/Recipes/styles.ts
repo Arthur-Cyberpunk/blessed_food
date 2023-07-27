@@ -43,3 +43,34 @@ export const Recipe = styled.div`
     grid-template-columns: 1fr;
   }
 `;
+
+export const BoxButton = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+
+  button {
+    background: #006400;
+    color: #fff;
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+`;
+
+export const BoxNoFound = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+
+  p {
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+`;
