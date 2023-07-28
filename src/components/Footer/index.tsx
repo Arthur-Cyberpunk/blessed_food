@@ -59,8 +59,6 @@ const Footer = () => {
           </div>
 
           {/* <Button
-                        title='Sign up'
-                        btnType='button'
                         conteinerStyle='mt-10 md:block bg-transparent border border-white text-white hover:bg-white hover:text-black rounded-md min-w-[130px]'
                     /> */}
         </BoxSocialMedia>
