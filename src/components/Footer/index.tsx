@@ -65,7 +65,7 @@ const Footer = () => {
       </div>
 
       <div className="flex items-center justify-center py-10">
-        <span className="text-gray-400 leading-10">CodeWave &copy; 2023</span>
+        <span className="text-gray-400 leading-10">Blessed &copy; 2023</span>
       </div>
     </FooterFood>
   );
