@@ -1,6 +1,5 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import {
-  BoxLegal,
   BoxLinks,
   BoxName,
   BoxSocialMedia,
@@ -30,33 +29,33 @@ const Footer = () => {
           </div>
         </BoxLinks>
 
-        <BoxLegal>
+        <BoxLinks>
           <p>LEGAL</p>
           <div>
-            <p>Terms and Conditions</p>
-            <p>License Agreement</p>
-            <p>Privacy Policy</p>
-            <p>Copyright Information</p>
-            <p>Cookies Policy</p>
+            <a>Terms and Conditions</a>
+            <a>License Agreement</a>
+            <a>Privacy Policy</a>
+            <a>Copyright Information</a>
+            <a>Cookies Policy</a>
           </div>
-        </BoxLegal>
+        </BoxLinks>
 
         <BoxSocialMedia>
           <p>SOCIAL MEDIA</p>
           <div>
-            <p>
-              <FaFacebook size={18} />
-            </p>
+            <a>
+              <FaFacebook />
+            </a>
 
-            <p>
-              <FaInstagram size={18} />
-            </p>
-            <p>
-              <FaTwitter size={18} />
-            </p>
-            <p>
-              <FaYoutube size={18} />
-            </p>
+            <a>
+              <FaInstagram />
+            </a>
+            <a>
+              <FaTwitter />
+            </a>
+            <a>
+              <FaYoutube />
+            </a>
           </div>
 
           <ButtonSign>

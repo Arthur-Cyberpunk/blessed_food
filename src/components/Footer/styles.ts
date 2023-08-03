@@ -19,12 +19,13 @@ export const BoxName = styled.div`
   display: flex;
 
   p {
+    font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
 
     span {
       color: #00ff00;
-      font-size: 1rem;
+      font-size: 1.4rem;
     }
   }
 `;
@@ -34,7 +35,7 @@ export const BoxLinks = styled.div`
   flex-direction: column;
 
   p {
-    font-weight: bold;
+    font-size: 1.4rem;
     text-align: center;
   }
 
@@ -45,29 +46,7 @@ export const BoxLinks = styled.div`
 
     a {
       color: #fff;
-      font-size: 1rem;
-      text-decoration: none;
-    }
-  }
-`;
-
-export const BoxLegal = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  p {
-    font-weight: bold;
-    text-align: center;
-  }
-
-  div {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-
-    p {
-      color: #fff;
-      font-size: 1rem;
+      font-size: 1.2rem;
       text-decoration: none;
     }
   }
@@ -79,20 +58,39 @@ export const BoxSocialMedia = styled.div`
   flex-direction: column;
 
   p {
-    font-weight: bold;
+    font-size: 1.4rem;
     text-align: center;
   }
 
   div {
     display: flex;
-    //flex-direction: column;
     text-align: center;
 
-    p {
+    a {
       color: #fff;
-      font-size: 1rem;
+      font-size: 1.4rem;
       text-decoration: none;
-      //padding: 2rem 0;
+      display: flex;
+      justify-content: center;
+
+      &:nth-child(1) {
+        padding: 0.4rem;
+        background: #097eeb;
+      }
+
+      &:nth-child(2) {
+        padding: 0.4rem;
+        background: #ef018b;
+      }
+
+      &:nth-child(3) {
+        padding: 0.4rem;
+        background: #097eeb;
+      }
+      &:nth-child(4) {
+        padding: 0.4rem;
+        background: #ff0000;
+      }
     }
   }
 `;
