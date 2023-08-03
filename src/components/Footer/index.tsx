@@ -4,6 +4,7 @@ import {
   BoxLinks,
   BoxName,
   BoxSocialMedia,
+  ButtonSign,
   FooterFood,
 } from "./styles";
 
@@ -58,9 +59,9 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* <Button
-                        conteinerStyle='mt-10 md:block bg-transparent border border-white text-white hover:bg-white hover:text-black rounded-md min-w-[130px]'
-                    /> */}
+          <ButtonSign>
+            <span>Sign in</span>
+          </ButtonSign>
         </BoxSocialMedia>
       </div>
 

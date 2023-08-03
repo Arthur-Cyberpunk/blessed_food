@@ -2,17 +2,16 @@ import styled from "styled-components";
 
 export const FooterFood = styled.footer`
   color: #fff;
-  //padding: 5rem;
+  padding: 5rem 0rem;
   background: #000;
 
   div {
     width: 100%;
+    max-width: 70%;
     margin: 0 auto;
-    //padding: 5rem;
     display: flex;
-    //flex-direction: column;
     gap: 2rem;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 `;
 
@@ -48,7 +47,6 @@ export const BoxLinks = styled.div`
       color: #fff;
       font-size: 1rem;
       text-decoration: none;
-      //padding: 2rem 0;
     }
   }
 `;
@@ -71,12 +69,12 @@ export const BoxLegal = styled.div`
       color: #fff;
       font-size: 1rem;
       text-decoration: none;
-      //padding: 2rem 0;
     }
   }
 `;
 
 export const BoxSocialMedia = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
 
@@ -87,7 +85,8 @@ export const BoxSocialMedia = styled.div`
 
   div {
     display: flex;
-    //text-align: center;
+    //flex-direction: column;
+    text-align: center;
 
     p {
       color: #fff;
@@ -95,5 +94,22 @@ export const BoxSocialMedia = styled.div`
       text-decoration: none;
       //padding: 2rem 0;
     }
+  }
+`;
+
+export const ButtonSign = styled.button`
+  width: 50%;
+  background-color: #000;
+  border-radius: 20px;
+  padding: 1rem 1rem;
+  border: 2px solid #fff;
+  transition: all 0.3s;
+  gap: 3rem;
+  color: #fff;
+  cursor: pointer;
+  transform: translate(50%);
+
+  span {
+    font-size: 1rem;
   }
 `;
