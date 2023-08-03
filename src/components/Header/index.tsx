@@ -9,7 +9,7 @@ const Header = ({ type }: HeaderProps) => {
   const images = [Banner1, Banner2, Banner3, Banner4, Banner5];
 
   return (
-    <Main>
+    <Main id="home">
       <BoxImage>
         <img
           src={images[Math.floor(Math.random() * images.length)]}

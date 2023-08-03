@@ -2,30 +2,44 @@ import styled from "styled-components";
 
 export const FooterFood = styled.footer`
   color: #fff;
-  padding: 5rem 0rem;
+  padding: 5rem 1rem;
   background: #000;
 
   div {
     width: 100%;
-    max-width: 70%;
+    max-width: 100rem;
     margin: 0 auto;
     display: flex;
     gap: 2rem;
     justify-content: space-around;
+
+    @media (max-width: 1000px) {
+      max-width: 110rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 `;
 
 export const BoxName = styled.div`
   display: flex;
 
+  @media (max-width: 1000px) {
+    padding: 0 4rem;
+  }
+
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
     text-align: center;
 
+    @media (max-width: 1000px) {
+      text-align: left;
+    }
+
     span {
       color: #00ff00;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
   }
 `;
@@ -34,9 +48,18 @@ export const BoxLinks = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 1000px) {
+    padding: 0 4rem;
+  }
+
   p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
+
+    @media (max-width: 1000px) {
+      text-align: left;
+      margin-top: 2rem;
+    }
   }
 
   div {
@@ -46,8 +69,12 @@ export const BoxLinks = styled.div`
 
     a {
       color: #fff;
-      font-size: 1.2rem;
+      font-size: 1rem;
       text-decoration: none;
+
+      @media (max-width: 1000px) {
+        text-align: left;
+      }
     }
   }
 `;
@@ -57,14 +84,28 @@ export const BoxSocialMedia = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 1000px) {
+    padding: 0 4rem;
+  }
+
   p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: center;
+
+    @media (max-width: 1000px) {
+      text-align: left;
+      margin-top: 2rem;
+    }
   }
 
   div {
     display: flex;
-    text-align: center;
+    justify-content: center;
+
+    @media (max-width: 1000px) {
+      flex-direction: row;
+      justify-content: left;
+    }
 
     a {
       color: #fff;
@@ -106,6 +147,11 @@ export const ButtonSign = styled.button`
   color: #fff;
   cursor: pointer;
   transform: translate(50%);
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    transform: unset;
+  }
 
   span {
     font-size: 1rem;
