@@ -14,7 +14,7 @@ const Footer = () => {
       <div>
         <BoxName>
           <p>
-            Flavor<span>Verse</span>
+            Blessed<span>Food</span>
           </p>
         </BoxName>
 
@@ -65,8 +65,8 @@ const Footer = () => {
         </BoxSocialMedia>
       </div>
 
-      <BoxCopy className="flex items-center justify-center py-10">
-        <span className="text-gray-400 leading-10">ArthurDev &copy; 2023</span>
+      <BoxCopy>
+        <span>ArthurDev &copy; 2023</span>
       </BoxCopy>
     </FooterFood>
   );

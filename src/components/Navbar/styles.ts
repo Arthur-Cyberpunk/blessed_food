@@ -25,12 +25,12 @@ export const LogoLink = styled.a`
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
   text-decoration: none;
 
   img {
-    width: 4rem;
+    width: 3rem;
 
     @media (max-width: 765px) {
       display: none;
@@ -46,7 +46,7 @@ export const RecipePages = styled.ul`
   display: flex;
   color: #fff;
   gap: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 
   @media (max-width: 765px) {
     display: none;
@@ -66,7 +66,7 @@ export const RecipePages = styled.ul`
 export const ButtonSign = styled.button`
   background-color: #000;
   border-radius: 20px;
-  padding: 1rem 3rem;
+  padding: 0.6rem 2.4rem;
   border: 2px solid #fff;
   transition: all 0.3s;
   gap: 3rem;
@@ -79,7 +79,7 @@ export const ButtonSign = styled.button`
   }
 
   span {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 `;
 

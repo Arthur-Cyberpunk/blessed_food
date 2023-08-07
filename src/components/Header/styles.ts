@@ -31,7 +31,7 @@ export const BoxTitle = styled.div`
 
   h1 {
     color: #fff;
-    font-size: 3.5rem;
+    font-size: 3rem;
     line-height: 4rem;
     text-align: center;
 
@@ -42,7 +42,7 @@ export const BoxTitle = styled.div`
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.6rem;
     text-align: center;
     color: #00ff00;
