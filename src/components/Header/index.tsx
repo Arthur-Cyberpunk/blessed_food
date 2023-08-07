@@ -2,10 +2,11 @@ import { Banner1, Banner2, Banner3, Banner4, Banner5 } from "../../images";
 import { BoxImage, BoxTitle, Main } from "./styles";
 
 interface HeaderProps {
+  title: any;
   type: string;
 }
 
-const Header = ({ type }: HeaderProps) => {
+const Header = ({ title, type }: HeaderProps) => {
   const images = [Banner1, Banner2, Banner3, Banner4, Banner5];
 
   return (
@@ -19,9 +20,7 @@ const Header = ({ type }: HeaderProps) => {
       </BoxImage>
 
       <BoxTitle>
-        <h1>
-          Taste the World with <br /> Blessed Food!
-        </h1>
+        {title}
         {type && (
           <p>
             Welcome to Blessed Food, your passport to culinary adventures!

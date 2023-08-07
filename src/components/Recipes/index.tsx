@@ -10,6 +10,8 @@ const Recipes = () => {
   const [query, setQuery] = useState("Vegan");
   const [limit, setLimit] = useState(30);
 
+  console.log(recipes);
+
   const handleChange = (e: any) => {
     setQuery(e.target.value);
   };
