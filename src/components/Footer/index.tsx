@@ -1,5 +1,6 @@
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import {
+  BoxCopy,
   BoxLinks,
   BoxName,
   BoxSocialMedia,
@@ -64,9 +65,9 @@ const Footer = () => {
         </BoxSocialMedia>
       </div>
 
-      <div className="flex items-center justify-center py-10">
-        <span className="text-gray-400 leading-10">Blessed &copy; 2023</span>
-      </div>
+      <BoxCopy className="flex items-center justify-center py-10">
+        <span className="text-gray-400 leading-10">ArthurDev &copy; 2023</span>
+      </BoxCopy>
     </FooterFood>
   );
 };

@@ -49,7 +49,7 @@ export const BoxButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 2rem 0 6rem;
 
   button {
     background: #006400;

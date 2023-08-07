@@ -4,6 +4,8 @@ export const FooterFood = styled.footer`
   color: #fff;
   padding: 5rem 1rem;
   background: #000;
+  border-top-style: solid;
+  border-top-width: 1px;
 
   div {
     width: 100%;
@@ -147,6 +149,22 @@ export const ButtonSign = styled.button`
   color: #fff;
   cursor: pointer;
   transform: translate(50%);
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    transform: unset;
+  }
+
+  span {
+    font-size: 1rem;
+  }
+`;
+
+export const BoxCopy = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0 2rem;
 
   @media (max-width: 1000px) {
     width: 100%;
