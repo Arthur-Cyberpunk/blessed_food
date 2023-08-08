@@ -1,3 +1,5 @@
+import { AiFillPushpin } from "react-icons/ai";
+import { BsPatchCheck } from "react-icons/bs";
 import styled from "styled-components";
 
 export const Main = styled.main`
@@ -38,4 +40,74 @@ export const BoxInfo = styled.div`
       justify-content: center;
     }
   }
+`;
+
+export const BoxCharacteristics = styled.div`
+  width: 100%;
+  //max-width: 133rem;
+  display: flex;
+  flex-direction: column;
+
+  div {
+    width: 100%;
+  }
+`;
+
+export const BoxIngredients = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+export const IngredientsTitle = styled.p`
+  color: #006400;
+  font-size: 1.6rem;
+  text-decoration: underline;
+`;
+
+export const IngredientInfo = styled.p`
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff;
+`;
+
+export const IconPin = styled(AiFillPushpin)`
+  color: #006400;
+  font-size: 1.2rem;
+`;
+
+export const BoxHealth = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+`;
+
+export const HealthTitle = styled.p`
+  color: #006400;
+  font-size: 1.6rem;
+  text-decoration: underline;
+`;
+
+export const BoxHealthMap = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  p {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #fff5f518;
+    border-radius: 20px;
+    padding: 1rem 1rem;
+    font-size: 0.8rem;
+  }
+`;
+
+export const IconCheck = styled(BsPatchCheck)`
+  color: #006400;
+  font-size: 1.2rem;
 `;
