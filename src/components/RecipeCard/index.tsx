@@ -2,9 +2,10 @@ import { BoxRecipe, BoxText, LinkRecipe } from "./styles";
 
 interface RecipeCardProps {
   recipe: any;
+  index?: any;
 }
 
-const RecipeCard = ({ recipe }: RecipeCardProps) => {
+const RecipeCard = ({ recipe, index }: RecipeCardProps) => {
   const { image, label, cuisineType, dietLabel, mealType, uri } =
     recipe?.recipe;
 

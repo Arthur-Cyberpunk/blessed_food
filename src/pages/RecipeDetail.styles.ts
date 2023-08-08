@@ -9,7 +9,9 @@ export const Main = styled.main`
 
 export const Container = styled.div`
   width: 100%;
+  max-width: 111rem;
   padding: 0 2rem;
+  transform: translate(4%);
 `;
 
 export const BoxInfo = styled.div`
@@ -44,9 +46,9 @@ export const BoxInfo = styled.div`
 
 export const BoxCharacteristics = styled.div`
   width: 100%;
-  //max-width: 133rem;
+  //max-width: 100rem;
   display: flex;
-  flex-direction: column;
+  //flex-direction: column;
 
   div {
     width: 100%;
@@ -110,4 +112,23 @@ export const BoxHealthMap = styled.div`
 export const IconCheck = styled(BsPatchCheck)`
   color: #006400;
   font-size: 1.2rem;
+`;
+
+export const TryThis = styled.p`
+  font-size: 1.4rem;
+  color: #fff;
+`;
+
+export const Comida = styled.div`
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media (max-width: 1790px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 1300px) {
+    grid-template-columns: 1fr;
+  }
 `;

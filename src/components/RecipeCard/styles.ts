@@ -38,8 +38,8 @@ export const BoxText = styled.div`
 
   p {
     height: 2rem;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1rem;
+    //font-weight: 500;
     padding: 0rem 1rem;
     color: #fff;
   }
@@ -48,11 +48,11 @@ export const BoxText = styled.div`
     display: flex;
     gap: 1rem;
     padding: 0rem 1rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
 
     span {
-      padding: 1rem 1rem;
-      font-size: 0.8rem;
+      padding: 0.6rem 0.6rem;
+      font-size: 0.6rem;
       text-transform: capitalize;
       background: #0c452243;
       border-radius: 20px;

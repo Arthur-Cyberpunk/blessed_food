@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
+import RecipeCard from "../components/RecipeCard";
 import { fetchRecipe, fetchRecipes } from "../utils";
 import {
   BoxCharacteristics,
@@ -8,6 +9,7 @@ import {
   BoxHealthMap,
   BoxInfo,
   BoxIngredients,
+  Comida,
   Container,
   HealthTitle,
   IconCheck,
@@ -15,6 +17,7 @@ import {
   IngredientInfo,
   IngredientsTitle,
   Main,
+  TryThis,
 } from "./RecipeDetail.styles";
 
 const RecipeDetail = () => {
@@ -96,23 +99,19 @@ const RecipeDetail = () => {
           </div>
 
           {/* RIGHT SIDE */}
-          {/* <div className='w-full md:w-2/4 2xl:pl-10 mt-20 md:mt-0'>
-          {
-            recipes?.length > 0 && (
+          <div>
+            {recipes?.length > 0 && (
               <>
-                <p className='text-white text-2xl'>Also Try This</p>
+                <TryThis>Also Try This</TryThis>
 
-                <div className='flex flex-wrap gap-6 px-1 pt-3'>
-                  {
-                    recipes?.map((item, index) => (
-                      <RecipeCard recipe={item} index={index} />
-                    ))
-                  }
-                </div>
+                <Comida>
+                  {recipes?.map((item, index) => (
+                    <RecipeCard recipe={item} index={index} />
+                  ))}
+                </Comida>
               </>
-            )
-          }
-        </div> */}
+            )}
+          </div>
         </BoxCharacteristics>
       </Container>
     </Main>
