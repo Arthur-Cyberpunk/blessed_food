@@ -37,11 +37,13 @@ export const BoxText = styled.div`
   word-break: break-all;
 
   p {
-    height: 2rem;
     font-size: 1rem;
-    //font-weight: 500;
     padding: 0rem 1rem;
     color: #fff;
+    max-width: 30ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   div {

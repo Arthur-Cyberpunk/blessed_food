@@ -95,16 +95,16 @@ export const HealthTitle = styled.p`
 export const BoxHealthMap = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.4rem;
 
   p {
     color: #fff;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;
     background: #fff5f518;
     border-radius: 20px;
-    padding: 1rem 1rem;
+    padding: 0.4rem 0.5rem;
     font-size: 0.8rem;
   }
 `;
@@ -120,7 +120,7 @@ export const TryThis = styled.p`
 `;
 
 export const Comida = styled.div`
-  max-width: 80%;
+  max-width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
