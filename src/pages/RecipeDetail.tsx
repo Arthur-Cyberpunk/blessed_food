@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
+import Loading from "../components/Loading";
 import RecipeCard from "../components/RecipeCard";
 import { fetchRecipe, fetchRecipes } from "../utils";
 import {
@@ -25,6 +26,7 @@ import {
 const RecipeDetail = () => {
   const [recipe, setRecipe] = useState<any>(null);
   const [recipes, setRecipes] = useState<Array<TemplateStringsArray>>([]);
+  const [loading, setLoading] = useState(false);
 
   const { id } = useParams();
 
@@ -37,85 +39,89 @@ const RecipeDetail = () => {
       const recommend = await fetchRecipes({ query: data?.label, limit: 5 });
 
       setRecipes(recommend);
+
+      setLoading(false);
     } catch (error) {
+      setLoading(false);
       console.log(error);
     }
   };
 
   useEffect(() => {
+    setLoading(true);
     getRecipe(id);
   }, [id]);
-
-  console.log(recipe);
-
-  console.log(recipes);
 
   return (
     <Main>
       <Header title={<h1>{recipe?.label}</h1>} image={recipe?.image} />
 
-      <Container>
-        <BoxInfo>
-          <div>
-            <span>{recipe?.calories.toFixed(2)} </span>
-            <p>CALORIES</p>
-          </div>
+      {loading ? (
+        <Loading></Loading>
+      ) : (
+        <Container>
+          <BoxInfo>
+            <div>
+              <span>{recipe?.calories.toFixed(2)} </span>
+              <p>CALORIES</p>
+            </div>
 
-          <div>
-            <span>{recipe?.totalTime}</span>
-            <p>TOTAL TIME</p>
-          </div>
+            <div>
+              <span>{recipe?.totalTime}</span>
+              <p>TOTAL TIME</p>
+            </div>
 
-          <div>
-            <span>{recipe?.yield}</span>
-            <p>SERVINGS</p>
-          </div>
-        </BoxInfo>
+            <div>
+              <span>{recipe?.yield}</span>
+              <p>SERVINGS</p>
+            </div>
+          </BoxInfo>
 
-        <BoxCharacteristics>
-          {/* LEFT SIDE */}
-          <LeftSide>
-            <BoxIngredients>
-              <IngredientsTitle>Ingredients</IngredientsTitle>
+          <BoxCharacteristics>
+            {/* LEFT SIDE */}
+            <LeftSide>
+              <BoxIngredients>
+                <IngredientsTitle>Ingredients</IngredientsTitle>
 
-              {recipe?.ingredientLines?.map((ingredient: any, index: any) => {
-                return (
-                  <IngredientInfo key={index}>
-                    <IconPin /> {ingredient}
-                  </IngredientInfo>
-                );
-              })}
-            </BoxIngredients>
+                {recipe?.ingredientLines?.map((ingredient: any, index: any) => {
+                  return (
+                    <IngredientInfo key={index}>
+                      <IconPin /> {ingredient}
+                    </IngredientInfo>
+                  );
+                })}
+              </BoxIngredients>
 
-            <BoxHealth>
-              <HealthTitle>Health Labels</HealthTitle>
+              <BoxHealth>
+                <HealthTitle>Health Labels</HealthTitle>
 
-              <BoxHealthMap>
-                {recipe?.healthLabels.map((item: any, index: any) => (
-                  <p key={index}>
-                    <IconCheck /> {item}
-                  </p>
-                ))}
-              </BoxHealthMap>
-            </BoxHealth>
-          </LeftSide>
-
-          {/* RIGHT SIDE */}
-          <RightSide>
-            {recipes?.length > 0 && (
-              <>
-                <TryThis>Also Try This</TryThis>
-
-                <RecipeOptions>
-                  {recipes?.map((item, index) => (
-                    <RecipeCard recipe={item} index={index} />
+                <BoxHealthMap>
+                  {recipe?.healthLabels.map((item: any, index: any) => (
+                    <p key={index}>
+                      <IconCheck /> {item}
+                    </p>
                   ))}
-                </RecipeOptions>
-              </>
-            )}
-          </RightSide>
-        </BoxCharacteristics>
-      </Container>
+                </BoxHealthMap>
+              </BoxHealth>
+            </LeftSide>
+
+            {/* RIGHT SIDE */}
+            <RightSide>
+              {recipes?.length > 0 && (
+                <>
+                  <TryThis>Also Try This</TryThis>
+
+                  <RecipeOptions>
+                    {recipes?.map((item, index) => (
+                      <RecipeCard recipe={item} index={index} />
+                    ))}
+                  </RecipeOptions>
+                </>
+              )}
+            </RightSide>
+          </BoxCharacteristics>
+        </Container>
+      )}
     </Main>
   );
 };
