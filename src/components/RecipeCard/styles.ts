@@ -3,9 +3,7 @@ import styled from "styled-components";
 
 export const LinkRecipe = styled(Link)`
   width: 100%;
-  //max-width: 80%;
   text-decoration: none;
-  //transform: translate(20%);
 `;
 
 export const BoxRecipe = styled.div`

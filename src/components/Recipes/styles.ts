@@ -24,7 +24,7 @@ export const BoxSearch = styled.div`
 
 export const Recipe = styled.div`
   width: 100%;
-  max-width: 90rem;
+  max-width: 80rem;
   margin: 4rem auto;
   padding: 0 2.5rem;
   display: grid;
