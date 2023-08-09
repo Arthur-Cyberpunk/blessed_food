@@ -27,8 +27,11 @@ const RecipeDetail = () => {
   const [recipe, setRecipe] = useState<any>(null);
   const [recipes, setRecipes] = useState<Array<TemplateStringsArray>>([]);
   const [loading, setLoading] = useState(false);
-
   const { id } = useParams();
+
+  const onTop = () => {
+    window.scrollTo(0, 0);
+  };
 
   const getRecipe = async (id: any) => {
     try {
@@ -48,79 +51,84 @@ const RecipeDetail = () => {
   };
 
   useEffect(() => {
+    onTop();
     setLoading(true);
     getRecipe(id);
   }, [id]);
 
   return (
     <Main>
-      <Header title={<h1>{recipe?.label}</h1>} image={recipe?.image} />
-
       {loading ? (
         <Loading></Loading>
       ) : (
-        <Container>
-          <BoxInfo>
-            <div>
-              <span>{recipe?.calories.toFixed(2)} </span>
-              <p>CALORIES</p>
-            </div>
+        <>
+          <Header title={<h1>{recipe?.label}</h1>} image={recipe?.image} />
 
-            <div>
-              <span>{recipe?.totalTime}</span>
-              <p>TOTAL TIME</p>
-            </div>
+          <Container>
+            <BoxInfo>
+              <div>
+                <span>{recipe?.calories.toFixed(2)} </span>
+                <p>CALORIES</p>
+              </div>
 
-            <div>
-              <span>{recipe?.yield}</span>
-              <p>SERVINGS</p>
-            </div>
-          </BoxInfo>
+              <div>
+                <span>{recipe?.totalTime}</span>
+                <p>TOTAL TIME</p>
+              </div>
 
-          <BoxCharacteristics>
-            {/* LEFT SIDE */}
-            <LeftSide>
-              <BoxIngredients>
-                <IngredientsTitle>Ingredients</IngredientsTitle>
+              <div>
+                <span>{recipe?.yield}</span>
+                <p>SERVINGS</p>
+              </div>
+            </BoxInfo>
 
-                {recipe?.ingredientLines?.map((ingredient: any, index: any) => {
-                  return (
-                    <IngredientInfo key={index}>
-                      <IconPin /> {ingredient}
-                    </IngredientInfo>
-                  );
-                })}
-              </BoxIngredients>
+            <BoxCharacteristics>
+              {/* LEFT SIDE */}
+              <LeftSide>
+                <BoxIngredients>
+                  <IngredientsTitle>Ingredients</IngredientsTitle>
 
-              <BoxHealth>
-                <HealthTitle>Health Labels</HealthTitle>
+                  {recipe?.ingredientLines?.map(
+                    (ingredient: any, index: any) => {
+                      return (
+                        <IngredientInfo key={index}>
+                          <IconPin /> {ingredient}
+                        </IngredientInfo>
+                      );
+                    },
+                  )}
+                </BoxIngredients>
 
-                <BoxHealthMap>
-                  {recipe?.healthLabels.map((item: any, index: any) => (
-                    <p key={index}>
-                      <IconCheck /> {item}
-                    </p>
-                  ))}
-                </BoxHealthMap>
-              </BoxHealth>
-            </LeftSide>
+                <BoxHealth>
+                  <HealthTitle>Health Labels</HealthTitle>
 
-            {/* RIGHT SIDE */}
-            <RightSide>
-              {recipes?.length > 0 && (
-                <>
-                  <TryThis>Also Try This</TryThis>
-
-                  <RecipeOptions>
-                    {recipes?.map((item, index) => (
-                      <RecipeCard recipe={item} index={index} />
+                  <BoxHealthMap>
+                    {recipe?.healthLabels.map((item: any, index: any) => (
+                      <p key={index}>
+                        <IconCheck /> {item}
+                      </p>
                     ))}
-                  </RecipeOptions>
-                </>
-              )}
-            </RightSide>
-          </BoxCharacteristics>
-        </Container>
+                  </BoxHealthMap>
+                </BoxHealth>
+              </LeftSide>
+
+              {/* RIGHT SIDE */}
+              <RightSide>
+                {recipes?.length > 0 && (
+                  <>
+                    <TryThis>Also Try This</TryThis>
+
+                    <RecipeOptions>
+                      {recipes?.map((item, index) => (
+                        <RecipeCard recipe={item} index={index} />
+                      ))}
+                    </RecipeOptions>
+                  </>
+                )}
+              </RightSide>
+            </BoxCharacteristics>
+          </Container>
+        </>
       )}
     </Main>
   );
