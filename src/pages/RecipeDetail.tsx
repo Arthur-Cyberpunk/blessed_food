@@ -9,7 +9,6 @@ import {
   BoxHealthMap,
   BoxInfo,
   BoxIngredients,
-  Comida,
   Container,
   HealthTitle,
   IconCheck,
@@ -18,6 +17,7 @@ import {
   IngredientsTitle,
   LeftSide,
   Main,
+  RecipeOptions,
   RightSide,
   TryThis,
 } from "./RecipeDetail.styles";
@@ -52,7 +52,7 @@ const RecipeDetail = () => {
 
   return (
     <Main>
-      <Header title={recipe?.label} image={recipe?.image} />
+      <Header title={<h1>{recipe?.label}</h1>} image={recipe?.image} />
 
       <Container>
         <BoxInfo>
@@ -106,11 +106,11 @@ const RecipeDetail = () => {
               <>
                 <TryThis>Also Try This</TryThis>
 
-                <Comida>
+                <RecipeOptions>
                   {recipes?.map((item, index) => (
                     <RecipeCard recipe={item} index={index} />
                   ))}
-                </Comida>
+                </RecipeOptions>
               </>
             )}
           </RightSide>

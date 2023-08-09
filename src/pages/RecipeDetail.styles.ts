@@ -150,7 +150,7 @@ export const TryThis = styled.p`
   }
 `;
 
-export const Comida = styled.div`
+export const RecipeOptions = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
