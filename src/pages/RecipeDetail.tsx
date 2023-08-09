@@ -16,7 +16,9 @@ import {
   IconPin,
   IngredientInfo,
   IngredientsTitle,
+  LeftSide,
   Main,
+  RightSide,
   TryThis,
 } from "./RecipeDetail.styles";
 
@@ -72,7 +74,7 @@ const RecipeDetail = () => {
 
         <BoxCharacteristics>
           {/* LEFT SIDE */}
-          <div>
+          <LeftSide>
             <BoxIngredients>
               <IngredientsTitle>Ingredients</IngredientsTitle>
 
@@ -96,10 +98,10 @@ const RecipeDetail = () => {
                 ))}
               </BoxHealthMap>
             </BoxHealth>
-          </div>
+          </LeftSide>
 
           {/* RIGHT SIDE */}
-          <div>
+          <RightSide>
             {recipes?.length > 0 && (
               <>
                 <TryThis>Also Try This</TryThis>
@@ -111,7 +113,7 @@ const RecipeDetail = () => {
                 </Comida>
               </>
             )}
-          </div>
+          </RightSide>
         </BoxCharacteristics>
       </Container>
     </Main>

@@ -24,7 +24,7 @@ export const BoxSearch = styled.div`
     color: #fff;
     font-size: 1.4rem;
     position: absolute;
-    top: 0px;
+    top: 0;
     bottom: 0px;
     right: 0px;
     display: flex;

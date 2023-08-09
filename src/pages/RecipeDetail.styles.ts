@@ -9,9 +9,12 @@ export const Main = styled.main`
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 111rem;
-  padding: 0 2rem;
-  transform: translate(4%);
+  //max-width: 111rem;
+  padding: 0 5rem;
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
 `;
 
 export const BoxInfo = styled.div`
@@ -46,12 +49,23 @@ export const BoxInfo = styled.div`
 
 export const BoxCharacteristics = styled.div`
   width: 100%;
-  //max-width: 100rem;
   display: flex;
-  //flex-direction: column;
+  margin-top: 4rem;
+  padding-bottom: 4rem;
 
-  div {
-    width: 100%;
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+export const LeftSide = styled.div`
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #fff;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    border: none;
   }
 `;
 
@@ -59,6 +73,7 @@ export const BoxIngredients = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-bottom: 4rem;
 `;
 
 export const IngredientsTitle = styled.p`
@@ -84,6 +99,10 @@ export const BoxHealth = styled.div`
   flex-direction: column;
   gap: 2rem;
   margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    margin-bottom: 6rem;
+  }
 `;
 
 export const HealthTitle = styled.p`
@@ -114,13 +133,24 @@ export const IconCheck = styled(BsPatchCheck)`
   font-size: 1.2rem;
 `;
 
+export const RightSide = styled.div`
+  width: 100%;
+`;
+
 export const TryThis = styled.p`
   font-size: 1.4rem;
   color: #fff;
+  margin-left: 1rem;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    font-size: 1.6rem;
+  }
 `;
 
 export const Comida = styled.div`
-  max-width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
@@ -128,7 +158,15 @@ export const Comida = styled.div`
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1100px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 600px) {
     grid-template-columns: 1fr;
   }
 `;

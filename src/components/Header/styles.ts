@@ -22,7 +22,7 @@ export const BoxTitle = styled.div`
   width: 100%;
   height: 100%;
   background: linear-gradient(to top, #000 10%, transparent 90%);
-  top: 0;
+  top: 10px;
   z-index: 8;
   display: flex;
   flex-direction: column;

@@ -21,15 +21,15 @@ export const BoxRecipe = styled.div`
   }
 
   img {
-    width: 100%;
-    height: 180px;
+    width: 14rem;
+    height: 160px;
     border-radius: 10px;
   }
 `;
 
 export const BoxText = styled.div`
-  width: 100%;
-  padding: 2rem 0rem;
+  width: 14rem;
+  padding: 1rem 0rem;
   display: flex;
   flex-direction: column;
   background: linear-gradient(to top, #0a0f1b 50%, transparent 100%);
