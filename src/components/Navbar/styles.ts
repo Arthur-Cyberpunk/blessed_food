@@ -17,6 +17,10 @@ export const Header = styled.header`
     padding: 1rem 4rem;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 765px) {
+      padding: 1rem 1rem;
+    }
   }
 `;
 
@@ -103,6 +107,10 @@ export const OptionsRoute = styled.div<Props>`
   padding: 2rem 4rem;
   gap: 2rem;
   display: ${(props) => (props.open ? "flex" : "none")};
+
+  @media (max-width: 765px) {
+    padding: 2rem 1rem;
+  }
 
   a {
     font-size: 1rem;
