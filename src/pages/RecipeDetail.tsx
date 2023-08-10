@@ -26,7 +26,7 @@ import {
 const RecipeDetail = () => {
   const [recipe, setRecipe] = useState<any>(null);
   const [recipes, setRecipes] = useState<Array<TemplateStringsArray>>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const { id } = useParams();
 
   const onTop = () => {

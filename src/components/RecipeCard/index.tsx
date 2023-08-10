@@ -5,9 +5,8 @@ interface RecipeCardProps {
   index?: any;
 }
 
-const RecipeCard = ({ recipe, index }: RecipeCardProps) => {
-  const { image, label, cuisineType, dietLabel, mealType, uri } =
-    recipe?.recipe;
+const RecipeCard = ({ recipe }: RecipeCardProps) => {
+  const { image, label, cuisineType, mealType, uri } = recipe?.recipe;
 
   const id = uri?.split("#")[1];
 

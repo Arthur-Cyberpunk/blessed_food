@@ -7,10 +7,10 @@ import Searchbar from "../SearchBar";
 import { BoxButton, BoxNoFound, BoxSearch, Main, Recipe } from "./styles";
 
 const Recipes = () => {
-  const [recipes, setRecipes] = useState([]);
-  const [query, setQuery] = useState("Beef");
-  const [limit, setLimit] = useState(30);
-  const [loading, setLoading] = useState(false);
+  const [recipes, setRecipes] = useState<Array<TemplateStringsArray>>([]);
+  const [query, setQuery] = useState<string>("Beef");
+  const [limit, setLimit] = useState<number>(30);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleChange = (e: any) => {
     setQuery(e.target.value);
@@ -69,7 +69,7 @@ const Recipes = () => {
               </Recipe>
 
               <BoxButton>
-                <span onClick={showMore}>Show More</span>
+                <button onClick={showMore}>Show More</button>
               </BoxButton>
             </>
           ) : (

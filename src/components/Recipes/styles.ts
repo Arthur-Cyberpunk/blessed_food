@@ -51,7 +51,7 @@ export const BoxButton = styled.div`
   justify-content: center;
   padding: 2rem 0 6rem;
 
-  span {
+  button {
     background: #006400;
     color: #fff;
     padding: 1rem 1rem;

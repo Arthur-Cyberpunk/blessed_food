@@ -12,7 +12,7 @@ import {
 } from "./styles";
 
 const NavBar = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
 
   return (
     <Header>
