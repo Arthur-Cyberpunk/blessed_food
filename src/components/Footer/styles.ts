@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FooterFood = styled.footer`
   color: #fff;
-  padding: 5rem 1rem;
+  padding: 5rem 1rem 0;
   background: #000;
   border-top-style: solid;
   border-top-width: 1px;

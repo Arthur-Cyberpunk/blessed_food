@@ -9,7 +9,7 @@ import { BoxButton, BoxNoFound, BoxSearch, Main, Recipe } from "./styles";
 const Recipes = () => {
   const [recipes, setRecipes] = useState<Array<TemplateStringsArray>>([]);
   const [query, setQuery] = useState<string>("Beef");
-  const [limit, setLimit] = useState<number>(30);
+  const [limit, setLimit] = useState<number>(8);
   const [loading, setLoading] = useState<boolean>(false);
 
   const handleChange = (e: any) => {
@@ -35,7 +35,7 @@ const Recipes = () => {
   };
 
   const showMore = () => {
-    setLimit((prev) => prev + 10);
+    setLimit((prev) => prev + 12);
     fetchRecipe();
   };
 
