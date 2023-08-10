@@ -109,8 +109,4 @@ export const OptionsRoute = styled.div<Props>`
     color: #fff;
     text-decoration: none;
   }
-  /*
-  @media (max-width: 765px) {
-    display: flex;
-  } */
 `;

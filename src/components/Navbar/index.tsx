@@ -30,7 +30,7 @@ const NavBar = () => {
             <a href="/#recipes">Explore</a>
           </li>
           <li>
-            <a href="/favorites">Favorites</a>
+            <a href="/#recipes">Favorites</a>
           </li>
         </RecipePages>
 
@@ -43,9 +43,15 @@ const NavBar = () => {
         </IconSign>
       </nav>
       <OptionsRoute open={open}>
-        <a href="/">Home</a>
-        <a href="/#recipes">Recipes</a>
-        <a href="/">Favorites</a>
+        <a href="/" onClick={() => setOpen((prev) => !prev)}>
+          Home
+        </a>
+        <a href="/#recipes" onClick={() => setOpen((prev) => !prev)}>
+          Recipes
+        </a>
+        <a href="/#recipes" onClick={() => setOpen((prev) => !prev)}>
+          Favorites
+        </a>
       </OptionsRoute>
     </Header>
   );
