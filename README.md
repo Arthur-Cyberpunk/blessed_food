@@ -10,6 +10,7 @@
 
 » Styled Components <br>
 » React / Typescript
+» Fetch API
 
 <h2>Screenshots of the Project 📸</h2>
 <br>
