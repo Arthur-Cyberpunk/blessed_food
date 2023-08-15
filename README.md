@@ -9,7 +9,7 @@
 <h3>Build with:</h3>
 
 » Styled Components <br>
-» React / Typescript
+» React / Typescript <br>
 » Fetch API
 
 <h2>Screenshots of the Project 📸</h2>
